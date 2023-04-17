@@ -1,6 +1,8 @@
-package de.fnbg.orefusion;
+package net.bambi.orefusion;
 
 import com.mojang.logging.LogUtils;
+
+import net.bambi.orefusion.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -15,25 +17,23 @@ import org.slf4j.Logger;
 @Mod(OreFusion.MOD_ID)
 public class OreFusion {
     public static final String MOD_ID = "orefusion";
-    // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public OreFusion() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        // Register the commonSetup method for modloading
+        ModItems.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
-        // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
-        
+
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
 
     }
-    
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
+
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
         @SubscribeEvent
