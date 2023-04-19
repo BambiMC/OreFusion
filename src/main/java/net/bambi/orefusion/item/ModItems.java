@@ -1,7 +1,6 @@
 package net.bambi.orefusion.item;
 
 import net.bambi.orefusion.OreFusion;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;

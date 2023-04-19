@@ -1,5 +1,7 @@
 {
-    "item.orefusion.phosphate_ore": "Phosphate Ore",
+    "block.orefusion.phosphate_ore": "Phosphate Ore",
+    "block.orefusion.phosphate_ore_deepslate": "Deepslate Phosphate Ore",
+    "block.orefusion.phosphate_block": "Block of Phosphate",
     "item.orefusion.phosphate_raw": "Raw Phosphate",
     "item.orefusion.phosphate_fertilizer": "Phosphate Fertilizer",
     "itemGroup.orefusion": "Orefusion"

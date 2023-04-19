@@ -2,6 +2,7 @@ package net.bambi.orefusion;
 
 import com.mojang.logging.LogUtils;
 
+import net.bambi.orefusion.block.ModBlocks;
 import net.bambi.orefusion.item.ModCreativeModeTab;
 import net.bambi.orefusion.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
@@ -25,6 +26,7 @@ public class OreFusion {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -42,6 +44,9 @@ public class OreFusion {
         if (event.getTab() == ModCreativeModeTab.OREFUSION_TAB) {
             event.accept(ModItems.PHOSPHATE_RAW);
             event.accept(ModItems.PHOSPHATE_FERTILIZER);
+            event.accept(ModBlocks.PHOSPHATE_BLOCK);
+            event.accept(ModBlocks.PHOSPHATE_ORE);
+            event.accept(ModBlocks.PHOSPHATE_ORE_DEEPSLATE);
         }
     }
 
