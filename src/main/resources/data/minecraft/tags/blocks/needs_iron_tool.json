@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "orefusion:phosphate_ore_deepslate",
+    "orefusion:phosphate_ore",
+    "orefusion:phosphate_block"
+  ]
+}
