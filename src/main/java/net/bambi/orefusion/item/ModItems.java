@@ -1,6 +1,7 @@
 package net.bambi.orefusion.item;
 
 import net.bambi.orefusion.OreFusion;
+import net.bambi.orefusion.item.custom.PhosphateFertilizerItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -14,7 +15,7 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> PHOSPHATE_FERTILIZER = ITEMS.register("phosphate_fertilizer",
-            () -> new Item(new Item.Properties()));
+            () -> new PhosphateFertilizerItem(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

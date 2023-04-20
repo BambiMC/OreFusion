@@ -5,6 +5,8 @@ import com.mojang.logging.LogUtils;
 import net.bambi.orefusion.block.ModBlocks;
 import net.bambi.orefusion.item.ModCreativeModeTab;
 import net.bambi.orefusion.item.ModItems;
+import net.bambi.orefusion.world.feature.ModConfiguredFeatures;
+import net.bambi.orefusion.world.feature.ModPlacedFeatures;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
@@ -33,7 +35,6 @@ public class OreFusion {
         MinecraftForge.EVENT_BUS.register(this);
 
         modEventBus.addListener(this::addCreative);
-
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

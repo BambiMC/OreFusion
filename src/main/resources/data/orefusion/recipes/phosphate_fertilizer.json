@@ -1,0 +1,14 @@
+
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "orefusion:phosphate_raw"
+      }
+    ],
+    "result": {
+      "item": "orefusion:phosphate_fertilizer",
+      "count": 1
+    }
+  }
+
