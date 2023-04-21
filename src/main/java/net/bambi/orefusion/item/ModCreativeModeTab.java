@@ -18,6 +18,6 @@ public class ModCreativeModeTab {
         OREFUSION_TAB = event.registerCreativeModeTab(new ResourceLocation(
                 OreFusion.MOD_ID, "orefusion_tab"),
                 builder -> builder.icon(() -> new ItemStack(ModItems.PHOSPHATE_RAW.get()))
-                        .title(Component.literal("OreFusion Tab")).build());
+                        .title(Component.literal("creativemodetab.orefusion_tab")).build());
     }
 }

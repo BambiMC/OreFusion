@@ -2,11 +2,15 @@ package net.bambi.orefusion.block;
 
 import net.bambi.orefusion.OreFusion;
 import net.bambi.orefusion.item.ModItems;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -25,12 +29,10 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> PHOSPHATE_ORE = registerBlock("phosphate_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(6f).requiresCorrectToolForDrops(),
-                    UniformInt.of(3, 7)));
+                    .strength(5f).requiresCorrectToolForDrops(), UniformInt.of(2, 6)));
     public static final RegistryObject<Block> PHOSPHATE_ORE_DEEPSLATE = registerBlock("phosphate_ore_deepslate",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(6f).requiresCorrectToolForDrops(),
-                    UniformInt.of(3, 7)));
+                    .strength(8f).requiresCorrectToolForDrops(), UniformInt.of(2, 6)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
@@ -39,7 +41,8 @@ public class ModBlocks {
     }
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
-        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
+                new Item.Properties()));
     }
 
     public static void register(IEventBus eventBus) {
