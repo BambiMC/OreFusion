@@ -21,10 +21,11 @@ public class ModPlacedFeatures {
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
-        register(context, PHOSPHATE_PLACED_KEY,
-                configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_PHOSPHATE_ORE_KEY),
+        register(context,
+                PHOSPHATE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_PHOSPHATE_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(16, // veins per chunk
-                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(255))));
+                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-64), VerticalAnchor.absolute(80))));
+
     }
 
     private static ResourceKey<PlacedFeature> createKey(String name) {

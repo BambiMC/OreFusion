@@ -1,6 +1,0 @@
-{
-    "parent": "block/cube_all",
-    "textures": {
-        "all": "orefusion:block/phosphate_ore_deepslate"
-    }
-}
