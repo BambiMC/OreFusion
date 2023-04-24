@@ -3,6 +3,7 @@ package net.bambi.orefusion.datagen;
 import net.bambi.orefusion.OreFusion;
 import net.bambi.orefusion.block.ModBlocks;
 import net.bambi.orefusion.item.ModItems;
+import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
@@ -30,15 +31,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                                 RecipeCategory.MISC,
                                 ModBlocks.PHOSPHATE_BLOCK.get());
 
-                // TODO Recipe einbauen, um aus 1 raw phosphate 1 || 2 fertilizer zu machen
-
-                // ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,
-                // ModItems.BLACK_OPAL.get())
-                // .requires(ModBlocks.BLACK_OPAL_BLOCK.get())
-                // .unlockedBy("has_:phosphate_block",
-                // inventoryTrigger(ItemPredicate.Builder.item()
-                // .of(ModBlocks.BLACK_OPAL_BLOCK.get()).build()))
-                // .save(consumer);
+                ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,
+                                ModItems.PHOSPHATE_FERTILIZER.get(), 2)
+                                .requires(ModItems.PHOSPHATE_RAW.get())
+                                .unlockedBy("has_:phosphate_raw",
+                                                inventoryTrigger(ItemPredicate.Builder.item()
+                                                                .of(ModItems.PHOSPHATE_RAW.get()).build()))
+                                .save(consumer);
 
                 // ShapedRecipeBuilder.shaped(RecipeCategory.MISC,
                 // ModBlocks.BLACK_OPAL_BLOCK.get())
