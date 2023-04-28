@@ -30,8 +30,6 @@ public class ModConfiguredFeatures {
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
-        // RuleTest netherrackReplaceables = new BlockMatchTest(Blocks.NETHERRACK);
-        // RuleTest endstoneReplaceables = new BlockMatchTest(Blocks.END_STONE);
 
         List<OreConfiguration.TargetBlockState> overworldPhosphateOres = List.of(
                 OreConfiguration.target(stoneReplaceables, ModBlocks.PHOSPHATE_ORE.get().defaultBlockState()),
@@ -43,8 +41,7 @@ public class ModConfiguredFeatures {
                         new TwoLayersFeatureSize(1, 0, 2)).build());
 
         register(context, OVERWORLD_PHOSPHATE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldPhosphateOres, 9));
-
-    }
+           }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
         return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(OreFusion.MOD_ID, name));
