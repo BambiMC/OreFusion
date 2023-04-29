@@ -30,7 +30,7 @@ public class ModPlacedFeatures {
                         HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-64), VerticalAnchor.absolute(80))));
 
         register(context, EBONY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.EBONY_KEY),
-                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2), ModBlocks.EBONY_SAPLING.get()));
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.1f, 0), ModBlocks.EBONY_SAPLING.get()));
 
     }
 
