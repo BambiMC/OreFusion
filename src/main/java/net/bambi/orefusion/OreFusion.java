@@ -44,6 +44,8 @@ public class OreFusion {
             event.accept(ModBlocks.PHOSPHATE_ORE_DEEPSLATE);
             event.accept(ModBlocks.PHOSPHATE_BLOCK);
 
+            event.accept(ModBlocks.LIMESTONE);
+
             event.accept(ModBlocks.EBONY_LEAVES);
             event.accept(ModBlocks.EBONY_LOG);
             event.accept(ModBlocks.EBONY_PLANKS);

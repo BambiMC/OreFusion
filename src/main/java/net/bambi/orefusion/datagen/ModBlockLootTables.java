@@ -18,10 +18,11 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         add(ModBlocks.PHOSPHATE_ORE.get(), (block) -> createOreDrop(ModBlocks.PHOSPHATE_ORE.get(), ModItems.PHOSPHATE_RAW.get()));
         add(ModBlocks.PHOSPHATE_ORE_DEEPSLATE.get(), (block) -> createOreDrop(ModBlocks.PHOSPHATE_ORE_DEEPSLATE.get(), ModItems.PHOSPHATE_RAW.get()));
+        add(ModBlocks.LIMESTONE.get(), (block) -> createOreDrop(ModBlocks.LIMESTONE.get(), ModItems.LIMESTONE.get()));
+
         this.dropSelf(ModBlocks.EBONY_LOG.get());
         this.dropSelf(ModBlocks.EBONY_WOOD.get());
         this.dropSelf(ModBlocks.EBONY_PLANKS.get());
-
         this.dropSelf(ModBlocks.STRIPPED_EBONY_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_EBONY_WOOD.get());
         this.dropSelf(ModBlocks.EBONY_SAPLING.get());

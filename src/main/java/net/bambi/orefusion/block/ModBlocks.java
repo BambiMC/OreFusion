@@ -33,6 +33,10 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(8f).requiresCorrectToolForDrops(),
                     UniformInt.of(2, 6)));
 
+    public static final RegistryObject<Block> LIMESTONE = registerBlock("limestone",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f).requiresCorrectToolForDrops(),
+                    UniformInt.of(2, 6)));
+
     public static final RegistryObject<Block> EBONY_LOG = registerBlock("ebony_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(5f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> EBONY_WOOD = registerBlock("ebony_wood",

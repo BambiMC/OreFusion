@@ -19,6 +19,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.PHOSPHATE_BLOCK);
         blockWithItem(ModBlocks.PHOSPHATE_ORE);
         blockWithItem(ModBlocks.PHOSPHATE_ORE_DEEPSLATE);
+        blockWithItem(ModBlocks.LIMESTONE);
 
         logBlock((RotatedPillarBlock) ModBlocks.EBONY_LOG.get());
         axisBlock((RotatedPillarBlock) ModBlocks.EBONY_WOOD.get(), blockTexture(ModBlocks.EBONY_LOG.get()), blockTexture(ModBlocks.EBONY_LOG.get()));
