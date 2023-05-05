@@ -15,5 +15,7 @@ public class ModItems {
     public static final RegistryObject<Item> PHOSPHATE_FERTILIZER = ITEMS.register("phosphate_fertilizer",
             () -> new PhosphateFertilizerItem(new Item.Properties()));
 
+    public static Object LIMESTONE;
+
     public static void register(IEventBus eventBus) { ITEMS.register(eventBus); }
 }

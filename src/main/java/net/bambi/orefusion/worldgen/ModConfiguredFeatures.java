@@ -26,7 +26,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> EBONY_KEY = registerKey("ebony");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_PHOSPHATE_ORE_KEY = registerKey("phosphate_ore");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_LIMESTONE_ORE_KEY = registerKey("limestone_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_LIMESTONE_ORE_KEY = registerKey("limestone");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -36,7 +36,7 @@ public class ModConfiguredFeatures {
                 OreConfiguration.target(stoneReplaceables, ModBlocks.PHOSPHATE_ORE.get().defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.PHOSPHATE_ORE_DEEPSLATE.get().defaultBlockState()));
 
-        List<OreConfiguration.TargetBlockState> overworldLimestoneOre = List.of(
+        List<OreConfiguration.TargetBlockState> overworldLimestoneOres = List.of(
                 OreConfiguration.target(stoneReplaceables, ModBlocks.LIMESTONE.get().defaultBlockState()));
 
         register(context, EBONY_KEY, Feature.TREE,
@@ -44,8 +44,9 @@ public class ModConfiguredFeatures {
                         BlockStateProvider.simple(ModBlocks.EBONY_LEAVES.get()), new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 4),
                         new TwoLayersFeatureSize(1, 0, 2)).build());
 
+        //veins size max 9 / 64, MAX IS 64!
         register(context, OVERWORLD_PHOSPHATE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldPhosphateOres, 9));
-        register(context, OVERWORLD_LIMESTONE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldLimestoneOre, 90));
+        register(context, OVERWORLD_LIMESTONE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldLimestoneOres, 64));
        
     }
 

@@ -28,11 +28,11 @@ public class ModPlacedFeatures {
 
         register(context, PHOSPHATE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_PHOSPHATE_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(16, // veins per chunk
-                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-64), VerticalAnchor.absolute(80))));
+                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(64), VerticalAnchor.aboveBottom(120))));
 
         register(context, LIMESTONE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_LIMESTONE_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(16, // veins per chunk
-                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(120))));
+                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-64), VerticalAnchor.absolute(120))));
 
         register(context, EBONY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.EBONY_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.1f, 0), ModBlocks.EBONY_SAPLING.get()));
@@ -48,8 +48,8 @@ public class ModPlacedFeatures {
         context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
     }
 
-    private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key,
-            Holder<ConfiguredFeature<?, ?>> configuration, PlacementModifier... modifiers) {
+    private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> configuration,
+                                 PlacementModifier... modifiers) {
         register(context, key, configuration, List.of(modifiers));
     }
 }
