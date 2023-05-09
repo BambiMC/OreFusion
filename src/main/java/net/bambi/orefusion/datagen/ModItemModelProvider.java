@@ -19,6 +19,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         simpleItem(ModItems.PHOSPHATE_RAW);
         simpleItem(ModItems.PHOSPHATE_FERTILIZER);
+        simpleItem(ModItems.PHOSPHATE_PURIFIED);
         saplingItem(ModBlocks.EBONY_SAPLING);
     }
 

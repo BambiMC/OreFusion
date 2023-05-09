@@ -33,13 +33,13 @@ public class OreFusion {
         modEventBus.addListener(this::addCreative);
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event) {
-    }
+    private void commonSetup(final FMLCommonSetupEvent event) {}
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
         if (event.getTab() == ModCreativeModeTabs.OREFUSION_TAB) {
-            event.accept(ModItems.PHOSPHATE_FERTILIZER);
             event.accept(ModItems.PHOSPHATE_RAW);
+            event.accept(ModItems.PHOSPHATE_FERTILIZER);
+            event.accept(ModItems.PHOSPHATE_PURIFIED);
             event.accept(ModBlocks.PHOSPHATE_ORE);
             event.accept(ModBlocks.PHOSPHATE_ORE_DEEPSLATE);
             event.accept(ModBlocks.PHOSPHATE_BLOCK);
@@ -53,7 +53,6 @@ public class OreFusion {
             event.accept(ModBlocks.EBONY_WOOD);
             event.accept(ModBlocks.STRIPPED_EBONY_LOG);
             event.accept(ModBlocks.STRIPPED_EBONY_WOOD);
-
 
         }
     }

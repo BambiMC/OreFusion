@@ -14,8 +14,7 @@ public class ModItems {
     public static final RegistryObject<Item> PHOSPHATE_RAW = ITEMS.register("phosphate_raw", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> PHOSPHATE_FERTILIZER = ITEMS.register("phosphate_fertilizer",
             () -> new PhosphateFertilizerItem(new Item.Properties()));
-
-    public static Object LIMESTONE;
+    public static final RegistryObject<Item> PHOSPHATE_PURIFIED = ITEMS.register("phosphate_purified", () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) { ITEMS.register(eventBus); }
 }
