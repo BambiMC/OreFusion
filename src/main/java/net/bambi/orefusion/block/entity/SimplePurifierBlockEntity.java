@@ -5,6 +5,8 @@ import javax.annotation.Nullable;
 import org.jetbrains.annotations.NotNull;
 
 import net.bambi.orefusion.item.ModItems;
+import net.bambi.orefusion.screen.GemInfusingStationMenu;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.MenuProvider;
@@ -113,7 +115,7 @@ public class SimplePurifierBlockEntity extends BlockEntity implements MenuProvid
         lazyItemHandler.invalidate();
     }
 
-    //Dafür wenn man die Welt verlässt, damit die Items in der Maschine gespeichert werden
+    // Dafür wenn man die Welt verlässt, damit die Items in der Maschine gespeichert werden
     @Override
     protected void saveAdditional(CompoundTag nbt) {
         nbt.put("inventory", itemHandler.serializeNBT());
