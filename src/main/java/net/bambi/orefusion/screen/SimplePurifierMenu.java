@@ -1,7 +1,8 @@
 package net.bambi.orefusion.screen;
 
 import net.bambi.orefusion.block.ModBlocks;
-import net.bambi.orefusion.block.entity.GemInfusingStationBlockEntity;
+import net.bambi.orefusion.block.entity.SimplePurifierBlockEntity;
+import net.bambi.orefusion.block.entity.SimplePurifierBlockEntity;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -13,7 +14,7 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 
 public class SimplePurifierMenu extends AbstractContainerMenu {
-    public final GemInfusingStationBlockEntity blockEntity;
+    public final SimplePurifierBlockEntity blockEntity;
     private final Level level;
     private final ContainerData data;
 
@@ -22,9 +23,9 @@ public class SimplePurifierMenu extends AbstractContainerMenu {
     }
 
     public SimplePurifierMenu(int id, Inventory inv, BlockEntity entity, ContainerData data) {
-        super(ModMenuTypes.GEM_INFUSING_STATION_MENU.get(), id);
+        super(ModMenuTypes.SIMPLE_PURIFIER_MENU.get(), id);
         checkContainerSize(inv, 3);
-        blockEntity = (GemInfusingStationBlockEntity) entity;
+        blockEntity = (SimplePurifierBlockEntity) entity;
         this.level = inv.player.level;
         this.data = data;
 
@@ -103,7 +104,7 @@ public class SimplePurifierMenu extends AbstractContainerMenu {
 
     @Override
     public boolean stillValid(Player player) {
-        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), player, ModBlocks.GEM_INFUSING_STATION.get());
+        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), player, ModBlocks.SIMPLE_PURIFIER.get());
     }
 
     private void addPlayerInventory(Inventory playerInventory) {

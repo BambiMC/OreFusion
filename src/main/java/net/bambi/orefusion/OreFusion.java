@@ -54,6 +54,8 @@ public class OreFusion {
             event.accept(ModBlocks.STRIPPED_EBONY_LOG);
             event.accept(ModBlocks.STRIPPED_EBONY_WOOD);
 
+            event.accept(ModBlocks.SIMPLE_PURIFIER);
+
         }
     }
 

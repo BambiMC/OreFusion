@@ -2,6 +2,7 @@ package net.bambi.orefusion.block;
 
 import net.bambi.orefusion.OreFusion;
 import net.bambi.orefusion.block.custom.ModFlammableRotatedPillarBlock;
+import net.bambi.orefusion.block.custom.SimplePurifierBlock;
 import net.bambi.orefusion.item.ModItems;
 import net.bambi.orefusion.worldgen.tree.EbonyTreeGrower;
 import net.minecraft.core.BlockPos;
@@ -71,6 +72,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> EBONY_SAPLING = registerBlock("ebony_sapling",
             () -> new SaplingBlock(new EbonyTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+    public static final RegistryObject<Block> SIMPLE_PURIFIER = registerBlock("simple_purifier",
+            () -> new SimplePurifierBlock(BlockBehaviour.Properties.of(Material.METAL).strength(6f).requiresCorrectToolForDrops().noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

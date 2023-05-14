@@ -5,7 +5,7 @@ import javax.annotation.Nullable;
 import org.jetbrains.annotations.NotNull;
 
 import net.bambi.orefusion.item.ModItems;
-import net.bambi.orefusion.screen.GemInfusingStationMenu;
+import net.bambi.orefusion.screen.SimplePurifierMenu;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -61,7 +61,7 @@ public class SimplePurifierBlockEntity extends BlockEntity implements MenuProvid
     private int maxProgress = 78;
 
     public SimplePurifierBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.GEM_INFUSING_STATION.get(), pos, state);
+        super(ModBlockEntities.SIMPLE_PURIFIER.get(), pos, state);
         this.data = new ContainerData() {
             @Override
             public int get(int index) {
@@ -86,12 +86,12 @@ public class SimplePurifierBlockEntity extends BlockEntity implements MenuProvid
     }
 
     @Override
-    public Component getDisplayName() { return Component.literal("Gem Infusing Station"); }
+    public Component getDisplayName() { return Component.literal("Simple Purifier"); }
 
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-        return new GemInfusingStationMenu(id, inventory, this, this.data);
+        return new SimplePurifierMenu(id, inventory, this, this.data);
     }
 
     @Override
@@ -119,7 +119,7 @@ public class SimplePurifierBlockEntity extends BlockEntity implements MenuProvid
     @Override
     protected void saveAdditional(CompoundTag nbt) {
         nbt.put("inventory", itemHandler.serializeNBT());
-        nbt.putInt("gem_infusing_station.progress", this.progress);
+        nbt.putInt("simple_purifier.progress", this.progress);
 
         super.saveAdditional(nbt);
     }
@@ -128,7 +128,7 @@ public class SimplePurifierBlockEntity extends BlockEntity implements MenuProvid
     public void load(CompoundTag nbt) {
         super.load(nbt);
         itemHandler.deserializeNBT(nbt.getCompound("inventory"));
-        progress = nbt.getInt("gem_infusing_station.progress");
+        progress = nbt.getInt("simple_purifier.progress");
     }
 
     public void drops() {
