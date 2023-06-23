@@ -86,7 +86,7 @@ public class SimplePurifierBlockEntity extends BlockEntity implements MenuProvid
     }
 
     @Override
-    public Component getDisplayName() { return Component.literal("Simple Purifier"); }
+    public Component getDisplayName() { return Component.literal("Gem Infusing Station"); }
 
     @Nullable
     @Override
@@ -115,11 +115,10 @@ public class SimplePurifierBlockEntity extends BlockEntity implements MenuProvid
         lazyItemHandler.invalidate();
     }
 
-    // Dafür wenn man die Welt verlässt, damit die Items in der Maschine gespeichert werden
     @Override
     protected void saveAdditional(CompoundTag nbt) {
         nbt.put("inventory", itemHandler.serializeNBT());
-        nbt.putInt("simple_purifier.progress", this.progress);
+        nbt.putInt("gem_infusing_station.progress", this.progress);
 
         super.saveAdditional(nbt);
     }
@@ -128,7 +127,7 @@ public class SimplePurifierBlockEntity extends BlockEntity implements MenuProvid
     public void load(CompoundTag nbt) {
         super.load(nbt);
         itemHandler.deserializeNBT(nbt.getCompound("inventory"));
-        progress = nbt.getInt("simple_purifier.progress");
+        progress = nbt.getInt("gem_infusing_station.progress");
     }
 
     public void drops() {
@@ -164,7 +163,8 @@ public class SimplePurifierBlockEntity extends BlockEntity implements MenuProvid
 
         if (hasRecipe(pEntity)) {
             pEntity.itemHandler.extractItem(1, 1, false);
-            pEntity.itemHandler.setStackInSlot(2, new ItemStack(ModItems.PHOSPHATE_RAW.get(), pEntity.itemHandler.getStackInSlot(2).getCount() + 1));
+            pEntity.itemHandler.setStackInSlot(2,
+                    new ItemStack(ModItems.PHOSPHATE_PURIFIED.get(), pEntity.itemHandler.getStackInSlot(2).getCount() + 1));
 
             pEntity.resetProgress();
         }

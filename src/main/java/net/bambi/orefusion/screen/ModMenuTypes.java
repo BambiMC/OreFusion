@@ -11,7 +11,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModMenuTypes {
-
     public static final DeferredRegister<MenuType<?>> MENUS = DeferredRegister.create(ForgeRegistries.MENU_TYPES, OreFusion.MOD_ID);
 
     public static final RegistryObject<MenuType<SimplePurifierMenu>> SIMPLE_PURIFIER_MENU = registerMenuType(SimplePurifierMenu::new,

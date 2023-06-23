@@ -13,17 +13,17 @@ import java.util.concurrent.CompletableFuture;
 
 @Mod.EventBusSubscriber(modid = OreFusion.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DataGenerators {
-    @SubscribeEvent
-    public static void gatherData(GatherDataEvent event) {
-        DataGenerator generator = event.getGenerator();
-        PackOutput packOutput = generator.getPackOutput();
-        ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
-        CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
+@SubscribeEvent
+public static void gatherData(GatherDataEvent event) {
+DataGenerator generator = event.getGenerator();
+PackOutput packOutput = generator.getPackOutput();
+ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
+CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
-        generator.addProvider(true, new ModRecipeProvider(packOutput));
-        generator.addProvider(true, ModLootTableProvider.create(packOutput));
-        generator.addProvider(true, new ModBlockStateProvider(packOutput, existingFileHelper));
-        generator.addProvider(true, new ModItemModelProvider(packOutput, existingFileHelper));
-        generator.addProvider(event.includeServer(), new ModWorldGenProvider(packOutput, lookupProvider));
-    }
+generator.addProvider(true, new ModRecipeProvider(packOutput));
+generator.addProvider(true, ModLootTableProvider.create(packOutput));
+generator.addProvider(true, new ModBlockStateProvider(packOutput, existingFileHelper));
+generator.addProvider(true, new ModItemModelProvider(packOutput, existingFileHelper));
+generator.addProvider(event.includeServer(), new ModWorldGenProvider(packOutput, lookupProvider));
+}
 }

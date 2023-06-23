@@ -11,10 +11,12 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, OreFusion.MOD_ID);
 
-    public static final RegistryObject<Item> PHOSPHATE_RAW = ITEMS.register("phosphate_raw", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PHOSPHATE_RAW = ITEMS.register("phosphate_raw",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.OREFUSION_TAB)));
     public static final RegistryObject<Item> PHOSPHATE_FERTILIZER = ITEMS.register("phosphate_fertilizer",
-            () -> new PhosphateFertilizerItem(new Item.Properties()));
-    public static final RegistryObject<Item> PHOSPHATE_PURIFIED = ITEMS.register("phosphate_purified", () -> new Item(new Item.Properties()));
+            () -> new PhosphateFertilizerItem(new Item.Properties().tab(ModCreativeModeTab.OREFUSION_TAB)));
+    public static final RegistryObject<Item> PHOSPHATE_PURIFIED = ITEMS.register("phosphate_purified",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.OREFUSION_TAB)));
 
     public static void register(IEventBus eventBus) { ITEMS.register(eventBus); }
 }

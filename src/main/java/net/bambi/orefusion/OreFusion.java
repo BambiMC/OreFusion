@@ -1,7 +1,7 @@
 package net.bambi.orefusion;
 
 import net.bambi.orefusion.block.ModBlocks;
-import net.bambi.orefusion.item.ModCreativeModeTabs;
+import net.bambi.orefusion.item.ModCreativeModeTab;
 import net.bambi.orefusion.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -36,7 +36,7 @@ public class OreFusion {
     private void commonSetup(final FMLCommonSetupEvent event) {}
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
-        if (event.getTab() == ModCreativeModeTabs.OREFUSION_TAB) {
+        if (event.getTab() == ModCreativeModeTab.OREFUSION_TAB) {
             event.accept(ModItems.PHOSPHATE_RAW);
             event.accept(ModItems.PHOSPHATE_FERTILIZER);
             event.accept(ModItems.PHOSPHATE_PURIFIED);
@@ -46,13 +46,13 @@ public class OreFusion {
 
             event.accept(ModBlocks.LIMESTONE);
 
-            event.accept(ModBlocks.EBONY_LEAVES);
-            event.accept(ModBlocks.EBONY_LOG);
-            event.accept(ModBlocks.EBONY_PLANKS);
-            event.accept(ModBlocks.EBONY_SAPLING);
-            event.accept(ModBlocks.EBONY_WOOD);
-            event.accept(ModBlocks.STRIPPED_EBONY_LOG);
-            event.accept(ModBlocks.STRIPPED_EBONY_WOOD);
+            // event.accept(ModBlocks.EBONY_LEAVES);
+            // event.accept(ModBlocks.EBONY_LOG);
+            // event.accept(ModBlocks.EBONY_PLANKS);
+            // event.accept(ModBlocks.EBONY_SAPLING);
+            // event.accept(ModBlocks.EBONY_WOOD);
+            // event.accept(ModBlocks.STRIPPED_EBONY_LOG);
+            // event.accept(ModBlocks.STRIPPED_EBONY_WOOD);
 
             event.accept(ModBlocks.SIMPLE_PURIFIER);
 
