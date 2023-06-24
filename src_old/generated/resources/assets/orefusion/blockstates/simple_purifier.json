@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "orefusion:block/simple_purifier"
+    }
+  }
+}

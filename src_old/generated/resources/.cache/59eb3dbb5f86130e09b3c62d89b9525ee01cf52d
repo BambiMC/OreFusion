@@ -1,0 +1,13 @@
+// 1.19.3	2023-05-14T23:40:00.2988817	Loot Tables
+cad88598209c0eea1420e0bec735dd4fff6d9a7a data/orefusion/loot_tables/blocks/ebony_leaves.json
+bdecb4582bac52a8dc9e619bb5931ba160a31808 data/orefusion/loot_tables/blocks/ebony_log.json
+2ec23aee0c12b92890b16336efb971541af8bf76 data/orefusion/loot_tables/blocks/ebony_planks.json
+2dded77e46c57b49503024e049d34a21766b1eb7 data/orefusion/loot_tables/blocks/ebony_sapling.json
+72855bb59b9dd28b59d5fc10db453d65ff9a61d3 data/orefusion/loot_tables/blocks/ebony_wood.json
+93c9fdd8de753865547d2d9f3ea34c6dfb438f96 data/orefusion/loot_tables/blocks/limestone.json
+3500e7fd441f886dc9279ddd9875a8fffbb6cace data/orefusion/loot_tables/blocks/phosphate_block.json
+3a1bf07b70d74f69b0a6aefbde16e72cdc2e0024 data/orefusion/loot_tables/blocks/phosphate_ore.json
+773f9447712d9b29eba6a6c29590a8ce419d8d04 data/orefusion/loot_tables/blocks/phosphate_ore_deepslate.json
+0f766c6cefbb2d2e138eaeff789a9f681588dc7d data/orefusion/loot_tables/blocks/simple_purifier.json
+6043fa77f68bf3bc313599489233951af967a7dd data/orefusion/loot_tables/blocks/stripped_ebony_log.json
+22351eb0b68787c83e0dfaaaefb011f134998370 data/orefusion/loot_tables/blocks/stripped_ebony_wood.json

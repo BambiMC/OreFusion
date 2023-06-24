@@ -2,7 +2,6 @@ package net.bambi.orefusion.screen;
 
 import net.bambi.orefusion.block.ModBlocks;
 import net.bambi.orefusion.block.entity.SimplePurifierBlockEntity;
-import net.bambi.orefusion.block.entity.SimplePurifierBlockEntity;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -41,7 +40,9 @@ public class SimplePurifierMenu extends AbstractContainerMenu {
         addDataSlots(data);
     }
 
-    public boolean isCrafting() { return data.get(0) > 0; }
+    public boolean isCrafting() {
+        return data.get(0) > 0;
+    }
 
     public int getScaledProgress() {
         int progress = this.data.get(0);
@@ -53,11 +54,16 @@ public class SimplePurifierMenu extends AbstractContainerMenu {
 
     // CREDIT GOES TO: diesieben07 | https://github.com/diesieben07/SevenCommons
     // must assign a slot number to each of the slots used by the GUI.
-    // For this container, we can see both the tile inventory's slots as well as the player inventory slots and the hotbar.
-    // Each time we add a Slot to the container, it automatically increases the slotIndex, which means
-    // 0 - 8 = hotbar slots (which will map to the InventoryPlayer slot numbers 0 - 8)
-    // 9 - 35 = player inventory slots (which map to the InventoryPlayer slot numbers 9 - 35)
-    // 36 - 44 = TileInventory slots, which map to our TileEntity slot numbers 0 - 8)
+    // For this container, we can see both the tile inventory's slots as well as the
+    // player inventory slots and the hotbar.
+    // Each time we add a Slot to the container, it automatically increases the
+    // slotIndex, which means
+    // 0 - 8 = hotbar slots (which will map to the InventoryPlayer slot numbers 0 -
+    // 8)
+    // 9 - 35 = player inventory slots (which map to the InventoryPlayer slot
+    // numbers 9 - 35)
+    // 36 - 44 = TileInventory slots, which map to our TileEntity slot numbers 0 -
+    // 8)
     private static final int HOTBAR_SLOT_COUNT = 9;
     private static final int PLAYER_INVENTORY_ROW_COUNT = 3;
     private static final int PLAYER_INVENTORY_COLUMN_COUNT = 9;
@@ -80,12 +86,14 @@ public class SimplePurifierMenu extends AbstractContainerMenu {
         // Check if the slot clicked is one of the vanilla container slots
         if (index < VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT) {
             // This is a vanilla container slot so merge the stack into the tile inventory
-            if (!moveItemStackTo(sourceStack, TE_INVENTORY_FIRST_SLOT_INDEX, TE_INVENTORY_FIRST_SLOT_INDEX + TE_INVENTORY_SLOT_COUNT, false)) {
+            if (!moveItemStackTo(sourceStack, TE_INVENTORY_FIRST_SLOT_INDEX,
+                    TE_INVENTORY_FIRST_SLOT_INDEX + TE_INVENTORY_SLOT_COUNT, false)) {
                 return ItemStack.EMPTY; // EMPTY_ITEM
             }
         } else if (index < TE_INVENTORY_FIRST_SLOT_INDEX + TE_INVENTORY_SLOT_COUNT) {
             // This is a TE slot so merge the stack into the players inventory
-            if (!moveItemStackTo(sourceStack, VANILLA_FIRST_SLOT_INDEX, VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT, false)) {
+            if (!moveItemStackTo(sourceStack, VANILLA_FIRST_SLOT_INDEX, VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT,
+                    false)) {
                 return ItemStack.EMPTY;
             }
         } else {
@@ -104,7 +112,8 @@ public class SimplePurifierMenu extends AbstractContainerMenu {
 
     @Override
     public boolean stillValid(Player player) {
-        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), player, ModBlocks.SIMPLE_PURIFIER.get());
+        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), player,
+                ModBlocks.SIMPLE_PURIFIER.get());
     }
 
     private void addPlayerInventory(Inventory playerInventory) {

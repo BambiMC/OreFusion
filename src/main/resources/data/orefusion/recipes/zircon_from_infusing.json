@@ -1,0 +1,15 @@
+{
+  "type": "orefusion:gem_infusing",
+  "ingredients": [
+    {
+      "item": "orefusion:raw_phosphate"
+    }
+  ],
+  "fluid": {
+    "FluidName": "minecraft:water",
+    "Amount": 500
+  },
+  "output": {
+    "item": "orefusion:phosphate"
+  }
+}

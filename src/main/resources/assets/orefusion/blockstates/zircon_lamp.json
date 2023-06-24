@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=true": { "model": "orefusion:block/phosphate_lamp_on" },
+    "lit=false": { "model": "orefusion:block/phosphate_lamp_off" }
+  }
+}

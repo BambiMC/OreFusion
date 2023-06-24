@@ -1,0 +1,10 @@
+{
+  "type": "orefusion:add_item",
+  "conditions": [
+    {
+      "condition": "block_state_property",
+      "block": "minecraft:grass"
+    }
+  ],
+  "item": "orefusion:blueberry_seeds"
+}

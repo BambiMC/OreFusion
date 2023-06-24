@@ -1,9 +1,9 @@
 {
-    "replace": false,
-    "values": [
-        "orefusion:ebony_log",
-        "orefusion:ebony_wood",
-        "orefusion:stripped_ebony_log",
-        "orefusion:stripped_ebony_wood"
-    ]
+  "replace": false,
+  "values": [
+    "orefusion:ebony_log",
+    "orefusion:ebony_wood",
+    "orefusion:stripped_ebony_log",
+    "orefusion:stripped_ebony_wood"
+  ]
 }

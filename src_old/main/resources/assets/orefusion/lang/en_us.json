@@ -1,0 +1,23 @@
+{
+    "item.orefusion.phosphate_fertilizer": "Phosphate Fertilizer",
+    "item.orefusion.phosphate_raw": "Raw Phosphate",
+    "item.orefusion.phosphate_purified": "Purified Phosphate",
+
+    "block.orefusion.phosphate_block": "Block of Raw Phosphate",
+    "block.orefusion.phosphate_ore": "Phosphate Ore",
+    "block.orefusion.phosphate_ore_deepslate": "Deepslate Phosphate Ore",
+
+    "block.orefusion.limestone": "Limestone",
+
+    "block.orefusion.ebony_log": "Ebony Log",
+    "block.orefusion.ebony_planks": "Ebony Planks",
+    "block.orefusion.ebony_wood": "Ebony Wood",
+    "block.orefusion.stripped_ebony_log": "Stripped Ebony Log",
+    "block.orefusion.stripped_ebony_wood": "Stripped Ebony Wood",
+    "block.orefusion.ebony_leaves": "Ebony Leaves",
+    "block.orefusion.ebony_sapling": "Ebony Sapling",
+
+    "block.orefusion.simple_purifier": "Simple Purifier",
+
+    "creativemodetab.orefusion_tab": "OreFusion Tab"
+}

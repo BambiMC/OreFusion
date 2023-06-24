@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "orefusion:block/stripped_red_maple_log",
+    "side": "orefusion:block/stripped_red_maple_log"
+  }
+}

@@ -11,14 +11,22 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModMenuTypes {
-    public static final DeferredRegister<MenuType<?>> MENUS = DeferredRegister.create(ForgeRegistries.MENU_TYPES, OreFusion.MOD_ID);
+    public static final DeferredRegister<MenuType<?>> MENUS = DeferredRegister.create(ForgeRegistries.MENU_TYPES,
+            OreFusion.MOD_ID);
 
-    public static final RegistryObject<MenuType<SimplePurifierMenu>> SIMPLE_PURIFIER_MENU = registerMenuType(SimplePurifierMenu::new,
+    public static final RegistryObject<MenuType<SimplePurifierMenu>> SIMPLE_PURIFIER_MENU = registerMenuType(
+            SimplePurifierMenu::new,
             "simple_purifier_menu");
 
-    private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory, String name) {
+    public static final RegistryObject<MenuType<GemInfusingStationMenu>> GEM_INFUSING_STATION_MENU = registerMenuType(
+            GemInfusingStationMenu::new, "gem_infusing_station_menu");
+
+    private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(
+            IContainerFactory<T> factory, String name) {
         return MENUS.register(name, () -> IForgeMenuType.create(factory));
     }
 
-    public static void register(IEventBus eventBus) { MENUS.register(eventBus); }
+    public static void register(IEventBus eventBus) {
+        MENUS.register(eventBus);
+    }
 }

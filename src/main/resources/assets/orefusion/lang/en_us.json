@@ -1,23 +1,62 @@
 {
-    "item.orefusion.phosphate_fertilizer": "Phosphate Fertilizer",
-    "item.orefusion.phosphate_raw": "Raw Phosphate",
-    "item.orefusion.phosphate_purified": "Purified Phosphate",
+  "item.orefusion.phosphate": "Phosphate",
+  "item.orefusion.raw_phosphate": "Raw Phosphate",
+  "item.orefusion.eight_ball": "Eight Ball",
+  "item.orefusion.blueberry": "Blueberry",
+  "item.orefusion.blueberry_seeds": "Blueberry Seeds",
+  "item.orefusion.soap_water_bucket": "Soap Water Bucket",
+  "item.orefusion.kaupensword": "Kaupen Sword",
+  "item.orefusion.chomper_spawn_egg": "Chomper Spawn Egg",
+  "item.orefusion.phosphate_pickaxe": "Phosphate Pickaxe",
 
-    "block.orefusion.phosphate_block": "Block of Raw Phosphate",
-    "block.orefusion.phosphate_ore": "Phosphate Ore",
-    "block.orefusion.phosphate_ore_deepslate": "Deepslate Phosphate Ore",
+  "block.orefusion.phosphate_block": "Block of Phosphate",
+  "block.orefusion.phosphate_ore": "Phosphate Ore",
+  "block.orefusion.jumpy_block": "Jumpy Block",
+  "block.orefusion.phosphate_lamp": "Phosphate Lamp",
+  "block.orefusion.blueberry_crop": "Blueberry Crop",
+  "block.orefusion.gem_infusing_station": "Gem Infusing Station",
 
-    "block.orefusion.limestone": "Limestone",
+  "block.orefusion.red_maple_log": "Red Maple Log",
+  "block.orefusion.red_maple_planks": "Red Maple Planks",
+  "block.orefusion.red_maple_wood": "Red Maple Wood",
+  "block.orefusion.stripped_red_maple_log": "Stripped Red Maple Log",
+  "block.orefusion.stripped_red_maple_wood": "Stripped Red Maple Wood",
+  "block.orefusion.red_maple_leaves": "Red Maple Leaves",
+  "block.orefusion.red_maple_sapling": "Red Maple Sapling",
 
-    "block.orefusion.ebony_log": "Ebony Log",
-    "block.orefusion.ebony_planks": "Ebony Planks",
-    "block.orefusion.ebony_wood": "Ebony Wood",
-    "block.orefusion.stripped_ebony_log": "Stripped Ebony Log",
-    "block.orefusion.stripped_ebony_wood": "Stripped Ebony Wood",
-    "block.orefusion.ebony_leaves": "Ebony Leaves",
-    "block.orefusion.ebony_sapling": "Ebony Sapling",
+  "block.orefusion.jasmine": "Jasmine",
+  "block.orefusion.potted_jasmine": "Potted Jasmine",
 
-    "block.orefusion.simple_purifier": "Simple Purifier",
+  "itemGroup.tutorialtab": "Phosphate Tutorial Tab",
+  "entity.minecraft.villager.orefusion.jumpy_master": "Jumpy Master",
 
-    "creativemodetab.orefusion_tab": "OreFusion Tab"
+  "key.category.orefusion.tutorial": "Tutorial Mod",
+  "key.orefusion.drink_water": "Drink Water",
+
+  "message.orefusion.drink_water": "Drinking Water",
+  "message.orefusion.no_water": "No water nearby!",
+
+  "orefusion.tooltip.liquid.amount.with.capacity": "%s / %s mB",
+  "orefusion.tooltip.liquid.amount": "%s mB",
+
+  "item.orefusion.phosphate_fertilizer": "Phosphate Fertilizer",
+  "item.orefusion.phosphate_raw": "Raw Phosphate",
+  "item.orefusion.phosphate_purified": "Purified Phosphate",
+
+  "block.orefusion.phosphate_block": "Block of Raw Phosphate",
+  "block.orefusion.phosphate_ore": "Phosphate Ore",
+
+  "block.orefusion.limestone": "Limestone",
+
+  "block.orefusion.ebony_log": "Ebony Log",
+  "block.orefusion.ebony_planks": "Ebony Planks",
+  "block.orefusion.ebony_wood": "Ebony Wood",
+  "block.orefusion.stripped_ebony_log": "Stripped Ebony Log",
+  "block.orefusion.stripped_ebony_wood": "Stripped Ebony Wood",
+  "block.orefusion.ebony_leaves": "Ebony Leaves",
+  "block.orefusion.ebony_sapling": "Ebony Sapling",
+
+  "block.orefusion.simple_purifier": "Simple Purifier",
+
+  "creativemodetab.orefusion_tab": "OreFusion Tab"
 }

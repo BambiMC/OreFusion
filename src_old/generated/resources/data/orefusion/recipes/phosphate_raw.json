@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "orefusion:phosphate_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "orefusion:phosphate_raw"
+  }
+}
